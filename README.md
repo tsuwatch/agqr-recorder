@@ -18,7 +18,15 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Configuration
+```
+rtmpdump: path_to_rtmpdump
+
+programs:
+  - title: program_title
+    schedule: cron_format
+    length: recording_time
+```
 
 ## Contributing
 
