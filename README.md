@@ -1,4 +1,4 @@
-# Agqr
+# Agqr::Recorder
 
 TODO: Write a gem description
 
@@ -6,7 +6,7 @@ TODO: Write a gem description
 
 Add this line to your application's Gemfile:
 
-    gem 'agqr'
+    gem 'agqr-recorder'
 
 And then execute:
 
@@ -14,7 +14,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install agqr
+    $ gem install agqr-recorder
 
 ## Usage
 
@@ -30,7 +30,7 @@ programs:
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/agqr/fork )
+1. Fork it ( https://github.com/[my-github-username]/agqr-recorder/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
