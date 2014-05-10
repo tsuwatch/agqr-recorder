@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'agqr/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "agqr"
+  spec.name          = "agqr-recorder"
   spec.version       = Agqr::VERSION
   spec.authors       = ["Tomohiro Suwa（tsuwatch）"]
   spec.email         = ["neoen.gsn@gmail.com"]
