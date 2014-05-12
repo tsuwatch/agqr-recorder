@@ -6,6 +6,9 @@ module Agqr
 
     class << self
 
+      def setup
+      end
+
       def record
       end
 
