@@ -7,13 +7,13 @@ module Agqr
       attr_reader :program, :thread
 
       def initialize(program)
-        @program = Program.new
+        @program = Program.new(program)
       end
 
       def start()
         @thread = Tread.new do
           Chrono::Trigger.new(schedule) do
-            # 録画
+            Recorder.record
           end.run
         end
       end
@@ -22,7 +22,10 @@ module Agqr
         thread.kill
       end
 
-      
+      def schedule
+        program.schedule
+      end
+
     end
   end
 end
