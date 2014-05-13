@@ -9,10 +9,14 @@ module Agqr
       def setup
       end
 
-      def record
+      def reserve(program)
+        Agqr::Recorder::Job.new(program).start
       end
 
       def jobs
+      end
+
+      def record
       end
 
     end

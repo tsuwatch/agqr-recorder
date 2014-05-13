@@ -10,7 +10,7 @@ module Agqr
         @program = Program.new(program)
       end
 
-      def start()
+      def start
         @thread = Tread.new do
           Chrono::Trigger.new(schedule) do
             Recorder.record
@@ -24,6 +24,10 @@ module Agqr
 
       def schedule
         program.schedule
+      end
+
+      def length
+        program.length
       end
 
     end
