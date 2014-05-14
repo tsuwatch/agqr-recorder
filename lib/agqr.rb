@@ -1,4 +1,5 @@
 require 'yaml'
+require "agqr/recorder"
 
 module Agqr
   class << self
@@ -9,8 +10,8 @@ module Agqr
         exit
       end
 
-      
       config = YAML.load_file(argv[0] || "config.yml")
+      Agqr::Recorder.new(config)
 
     end
   end

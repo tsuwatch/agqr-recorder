@@ -1,7 +1,7 @@
 require "chrono"
 
 module Agqr
-  module Recorder
+  class Recorder
     class Job
 
       attr_reader :program, :thread

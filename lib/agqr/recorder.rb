@@ -2,23 +2,21 @@ require "agqr/recorder/job"
 require "agqr/recorder/version"
 
 module Agqr
-  module Recorder
+  class Recorder
 
-    class << self
+    attr_reader :attributes
 
-      def setup
-      end
+    def initialize(attributes)
+      @attributes = attributes
+    end
 
-      def reserve(program)
-        Agqr::Recorder::Job.new(program).start
-      end
+    def reserve
+    end
 
-      def jobs
-      end
+    def jobs
+    end
 
-      def record
-      end
-
+    def record
     end
 
   end
