@@ -12,22 +12,14 @@ module Agqr
 
       def start
         @thread = Tread.new do
-          Chrono::Trigger.new(schedule) do
-            Recorder.record
+          Chrono::Trigger.new(program.schedule) do
+            Recorder.record self
           end.run
         end
       end
 
       def stop
         thread.kill
-      end
-
-      def schedule
-        program.schedule
-      end
-
-      def length
-        program.length
       end
 
     end
