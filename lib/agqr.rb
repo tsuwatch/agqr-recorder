@@ -12,10 +12,7 @@ module Agqr
 
       config = YAML.load_file(argv[0] || "config.yml")
       recorder = Agqr::Recorder.new(config)
-      config["programs"].each do |program|
-        recorder.reserve(program)
-      end
-
+      recorder.load
     end
   end
 end

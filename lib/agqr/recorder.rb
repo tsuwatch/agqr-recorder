@@ -12,8 +12,14 @@ module Agqr
       @jobs = []
     end
 
+    def load
+      programs.each do |program|
+        reserve(program)
+      end
+    end
+
     def reserve(program)
-      jobs << Agqr::Recorder::Job.new(program)
+      jobs << Agqr::Recorder::Job.new(program).start
     end
 
     def record(job)
@@ -22,6 +28,10 @@ module Agqr
 
     def rtmpdump
       attributes["rtmpdump"]
+    end
+
+    def programs
+      attributes["programs"]
     end
 
     def save_path
