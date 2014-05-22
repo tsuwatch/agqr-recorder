@@ -19,6 +19,8 @@ Or install it yourself as:
 
 ### Configuration
 ```
+agqr_stream_url: rtmp://fms-base1.mitene.ad.jp/agqr/aandg2
+save_path: pato/to/save/dir
 rtmpdump: path_to_rtmpdump
 
 programs:
