@@ -1,6 +1,5 @@
 # Agqr::Recorder
-
-TODO: Write a gem description
+Record agqr-program by cron format
 
 ## Installation
 
