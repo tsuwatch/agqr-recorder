@@ -15,7 +15,14 @@ Or install it yourself as:
 
     $ gem install agqr-recorder
 
+## Requirement
+
+* rtmpdump
+
 ## Usage
+
+1. Write config in yaml, format is below
+2. run `agqr-recorder /path/to/config.yml`
 
 ### Configuration
 ```
