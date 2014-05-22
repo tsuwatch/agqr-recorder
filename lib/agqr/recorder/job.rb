@@ -1,19 +1,24 @@
 require "chrono"
+require "agqr/program"
 
 module Agqr
   class Recorder
     class Job
 
-      attr_reader :program, :thread
+      attr_reader :recorder, :program, :thread
 
-      def initialize(program)
+      def initialize(recorder)
+        @recorder = recorder
+      end
+
+      def build(program)
         @program = Program.new(program)
       end
 
       def start
-        @thread = Tread.new do
+        @thread = Thread.new do
           Chrono::Trigger.new(program.schedule) do
-            Recorder.record self
+            recorder.record self
           end.run
         end
       end

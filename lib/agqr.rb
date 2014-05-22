@@ -12,7 +12,7 @@ module Agqr
 
       config = YAML.load_file(argv[0] || "config.yml")
       recorder = Agqr::Recorder.new(config)
-      recorder.load
+      recorder.load_programs
     end
   end
 end

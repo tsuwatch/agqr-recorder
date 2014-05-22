@@ -12,18 +12,23 @@ module Agqr
       @jobs = []
     end
 
-    def load
+    def load_programs
       programs.each do |program|
         reserve(program)
       end
+      exec
     end
 
     def reserve(program)
-      jobs << Agqr::Recorder::Job.new(program).start
+      job = Job.new(self)
+      job.build(program)
+      jobs << job
+      job.start
     end
 
     def record(job)
-      sysytem "#{rtmpdump} -r #{agqr_stream_url} --live -B #{job.program.length} -o #{save_path}/#{job.program.title}_#{Time.now.strftime('%Y%m%d')).gsub(' ', '')}"
+      cmd = "#{rtmpdump} -r #{agqr_stream_url} --live -B #{job.program.length} -o #{save_path}/#{job.program.title}_#{Time.now.strftime('%Y%m%d').gsub(' ', '')}.flv"
+      system cmd
     end
 
     def rtmpdump
@@ -36,6 +41,17 @@ module Agqr
 
     def save_path
       attributes["save_path"]
+    end
+
+    def agqr_stream_url
+      attributes["agqr_stream_url"]
+    end
+
+    private
+
+    def exec
+      loop do
+      end
     end
 
   end
