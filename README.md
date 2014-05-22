@@ -1,5 +1,7 @@
 # Agqr::Recorder
-Record agqr-program by cron format
+Agqr::Recorder can record a program of agqr.
+
+This specify the date and time in the cron format (using [Chrono](https://github.com/r7kamura/chrono/)).
 
 ## Installation
 

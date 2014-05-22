@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Agqr::VERSION
   spec.authors       = ["Tomohiro Suwa（tsuwatch）"]
   spec.email         = ["neoen.gsn@gmail.com"]
-  spec.summary       = %q{Record agqr-program by cron format}
-  spec.description   = %q{Record agqr-program by cron format}
+  spec.summary       = %q{Agqr::Recorder can record a program of agqr.}
+  spec.description   = %q{This specify the date and time in the cron format.}
   spec.homepage      = ""
   spec.license       = "MIT"
 
