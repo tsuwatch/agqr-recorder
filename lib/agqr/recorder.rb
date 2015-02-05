@@ -31,6 +31,8 @@ module Agqr
       system cmd
     end
 
+    private
+
     def rtmpdump
       attributes["rtmpdump"]
     end
@@ -44,10 +46,8 @@ module Agqr
     end
 
     def agqr_stream_url
-      attributes["agqr_stream_url"]
+      'rtmp://fms-base1.mitene.ad.jp/agqr/aandg22'
     end
-
-    private
 
     def exec
       loop do
