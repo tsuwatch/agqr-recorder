@@ -1,5 +1,5 @@
 # Agqr::Recorder
-Agqr::Recorder can record a program of agqr.
+Agqr::Recorder can record a program of 超！A&G.
 
 This specify the date and time in the cron format (using [Chrono](https://github.com/r7kamura/chrono/)).
 
